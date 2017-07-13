@@ -21,12 +21,14 @@
   <div class="container">.
   	<a-scene>
         <a-assets>
-          <img id="city" crossorigin="anonymous" src="img/maxresdefault.jpg">
+          <img id="city" crossorigin="anonymous" src="img/img_centro.jpg">
           <img id="city-thumb" crossorigin="anonymous" src="img/1_A.png">
           <img id="cubes-thumb" crossorigin="anonymous" src="img/2_A.png">
           <img id="sechelt-thumb" crossorigin="anonymous" src="img/3_A.png">
           <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
-          <img id="cubes" crossorigin="anonymous" src="img/acdmx_pista_360_galeria.jpg">
+         <!-- 
+          <img id="cubes" crossorigin="anonymous" src="img/maxresdefault.jpg">-->
+          <img id="cubes" crossorigin="anonymous" src="img/pista1.jpg" >
           <img id="sechelt" crossorigin="anonymous" src="img/paisaje.jpg">
         <!-- EMPIEZA IMAGENES PLANAS -->
           <!-- Image link template to be reused. -->
@@ -80,7 +82,7 @@
          que se encuentra en el centro de la pantalla.
       -> +y desplaza hacia arriba; -y hacia abajo
     --> <!-- intentar hacer figuras -->
-        <a-entity id="links" layout="type: line; margin: 2.5" position="0 -1 -4">
+        <a-entity id="links" layout="type: line; margin: 2.5" position="-3 -1 -4">
           <a-entity template="src:  #link" data-src="#cubes" data-thumb="#cubes-thumb"></a-entity>
           <a-entity template="src: #link" data-src="#city" data-thumb="#city-thumb"></a-entity>
           <a-entity template="src: #link" data-src="#sechelt" data-thumb="#sechelt-thumb"></a-entity>
@@ -108,6 +110,7 @@
       Buena documentación de VR:
       https://books.google.com.mx/books?id=R8JCDgAAQBAJ&pg=PA23&lpg=PA23&dq=diferencia+entre+camera+y+cursor+aframe&source=bl&ots=cmY6m4vE1r&sig=fF7ltqPDQrE5gaPtnct9o4VByTw&hl=es-419&sa=X&ved=0ahUKEwj5_aHcn_jUAhUK6CYKHdgiAvsQ6AEIOjAD#v=onepage&q=diferencia%20entre%20camera%20y%20cursor%20aframe&f=false
     -->
+    <a-entity position="0 0 0">
         <a-entity camera look-controls>
               <a-cursor id="cursor"
                 animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
@@ -117,6 +120,7 @@
                 fuse="true"
                 raycaster="objects: .link"></a-cursor>
         </a-entity>
+    </a-entity>
     </a-scene>
   </div>
 </main>

@@ -1,5 +1,5 @@
 canvas.a-canvas.a-grab-cursor {
-	height: 475px !important;
+	height: 600px !important;
 	/*height: 50%;*/
 }
 
@@ -18,5 +18,5 @@ body.a-body {
 
 a-scene {
 	position: static !important;
-	height: 400px;
+	height: 550px;
 }
